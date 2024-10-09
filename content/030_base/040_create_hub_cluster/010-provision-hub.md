@@ -206,13 +206,13 @@ module "eks" {
       max_size     = 10
       desired_size = 3
 
-      taints = local.aws_addons.enable_karpenter ? {
-        dedicated = {
-          key    = "CriticalAddonsOnly"
-          operator   = "Exists"
-          effect    = "NO_SCHEDULE"
-        }
-      } : {}
+      #taints = local.aws_addons.enable_karpenter ? {
+      #  dedicated = {
+      #    key    = "CriticalAddonsOnly"
+      #    operator   = "Exists"
+      #    effect    = "NO_SCHEDULE"
+      #  }
+      #} : {}
     }
   }
 
